@@ -101,10 +101,14 @@ jobs:
     strategy:
       matrix:
         include:
-          - node-version: 20.x   # fastest, so run first, to error fast
+          - node-version: 22.x   # fastest, so run first, to error fast
             os: ubuntu-latest
-          - node-version: 20.x   # slowest, so run next. sort by slowest from here to get earliest end through parallelism
+          - node-version: 22.x   # slowest, so run next. sort by slowest from here to get earliest end through parallelism
             os: macos-latest
+# bug in gh action for new version: https://github.com/nodejs/node/issues/52682
+#          - node-version: 22.x   # finish check big-3 on latest current
+#            os: windows-latest
+# testing under 20 instead until fixed
           - node-version: 20.x   # finish check big-3 on latest current
             os: windows-latest
           - node-version: 21.x   # check newest non-lts too
@@ -130,6 +134,8 @@ jobs:
           - node-version: 18.x
             os: ubuntu-latest
           - node-version: 19.x
+            os: ubuntu-latest
+          - node-version: 20.x
             os: ubuntu-latest
 
     runs-on: ${{ matrix.os }}
