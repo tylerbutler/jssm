@@ -1,12 +1,12 @@
 declare type StateType = string;
 import { JssmGenericState, JssmGenericConfig, JssmStateConfig, JssmTransition, JssmTransitionList, // JssmTransitionRule,
-JssmMachineInternalState, JssmAllowsOverride, JssmStateDeclaration, JssmStateStyleKeyList, JssmLayout, JssmHistory, JssmSerialization, FslDirection, FslDirections, FslTheme, HookDescription, HookHandler, HookContext, HookResult, HookComplexResult, JssmRng } from './jssm_types';
-import { arrow_direction, arrow_left_kind, arrow_right_kind } from './jssm_arrow';
-import { compile, make, wrap_parse } from './jssm_compiler';
-import { seq, unique, find_repeated, weighted_rand_select, weighted_sample_select, histograph, weighted_histo_key } from './jssm_util';
-import * as constants from './jssm_constants';
+JssmMachineInternalState, JssmAllowsOverride, JssmStateDeclaration, JssmStateStyleKeyList, JssmLayout, JssmHistory, JssmSerialization, FslDirection, FslDirections, FslTheme, HookDescription, HookHandler, HookContext, HookResult, HookComplexResult, JssmRng } from './jssm_types.js';
+import { arrow_direction, arrow_left_kind, arrow_right_kind } from './jssm_arrow.js';
+import { compile, make, wrap_parse } from './jssm_compiler.js';
+import { seq, unique, find_repeated, weighted_rand_select, weighted_sample_select, histograph, weighted_histo_key } from './jssm_util.js';
+import * as constants from './jssm_constants.js';
 declare const shapes: string[], gviz_shapes: string[], named_colors: string[];
-import { version, build_time } from './version';
+import { version, build_time } from './version.js';
 /*********
  *
  *  An internal method meant to take a series of declarations and fold them into

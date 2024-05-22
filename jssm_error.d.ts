@@ -1,4 +1,4 @@
-import { JssmErrorExtendedInfo } from './jssm_types';
+import { JssmErrorExtendedInfo } from './jssm_types.js';
 declare class JssmError extends Error {
     message: string;
     base_message: string;

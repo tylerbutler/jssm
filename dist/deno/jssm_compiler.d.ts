@@ -1,4 +1,4 @@
-import { JssmTransition, JssmCompileSe, JssmParseTree, JssmGenericConfig } from './jssm_types';
+import { JssmTransition, JssmCompileSe, JssmParseTree, JssmGenericConfig } from './jssm_types.js';
 /*********
  *
  *  Internal method meant to perform factory assembly of an edge.  Not meant for
