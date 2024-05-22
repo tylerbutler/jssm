@@ -1,7 +1,7 @@
 
 import * as assert from 'assert';
 import * as fc     from 'fast-check';
-import * as jssm   from '../jssm';
+import * as jssm   from '../jssm.js';
 
 const rand_cap = 10_000;
 

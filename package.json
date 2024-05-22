@@ -66,7 +66,8 @@
     "docs": "typedoc src/ts/jssm.ts src/ts/jssm_types.ts src/ts/jssm_constants.ts src/ts/jssm_error.ts src/ts/jssm_util.ts src/ts/version.ts --options typedoc-options.cjs",
     "cloc": "cloc --quiet ./src/** --exclude-list-file=./.clocignore --3 --json --out=./coverage/cloc/report_wt.json && cloc --quiet ./src/** --exclude-list-file=./.clocignore --exclude-dir=tests --3 --json --out=./coverage/cloc/report_nt.json && node ./src/buildjs/cloc_report.cjs",
     "readme": "rm -f ./README.md && node ./src/buildjs/make_readme.cjs && cp README.md dist/deno",
-    "changelog": "rm -f CHANGELOG.md && rm -f ./src/doc_md/CHANGELOG.md && better_git_changelog -b && cp CHANGELOG.* ./src/doc_md/"
+    "changelog": "rm -f CHANGELOG.md && rm -f ./src/doc_md/CHANGELOG.md && better_git_changelog -b && cp CHANGELOG.* ./src/doc_md/",
+    "attw": "attw --pack ."
   },
   "repository": {
     "type": "git",
@@ -111,6 +112,7 @@
   },
   "homepage": "https://stonecypher.github.io/jssm/",
   "devDependencies": {
+		"@arethetypeswrong/cli": "^0.15.3",
     "@knodes/typedoc-plugin-pages": "^0.22.5",
     "@rollup/plugin-commonjs": "^22.0.0",
     "@rollup/plugin-node-resolve": "^13.3.0",
